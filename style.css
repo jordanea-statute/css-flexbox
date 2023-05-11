@@ -1,0 +1,12 @@
+.child{
+    /*border-color: black;
+    border-style: solid;
+    border-width: 1px; */
+    border: black solid 1px; /*shorthand*/
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+.parent-box{
+    display: flex;
+}
