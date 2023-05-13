@@ -1,31 +1,74 @@
-.child-box{
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+body{
+    background-color: darkgrey;
+    font-family: 'Indie Flower', cursive;
+}
+.page-title{
+    text-align: center;
+    font-weight: 900 ;
+    font-size: 30pt;
+}
+.incial-text{
+    font-size: 20pt;
+}
+.property-title{
+    font-size: 25pt;
+    text-align: center;
+}
+.property-explanation{
+    font-size: 20pt;
+}
+.value-title{
+    font-size: 25pt;
+}
+.child-box {
     /*border-color: black;
     border-style: solid;
     border-width: 1px; */
-    border: black solid 1px; /*shorthand, é atalho*/
-    width: 100px;
-    height: 100px;
-    text-align: center; 
+    border: black solid 1px ; /* cofiguração de borda da caixa filho*/
+    width: 100px; /*largura da caixa*/
+    height: 100px; /*altura da caixa*/
+    text-align: center; /*centralizar o testo dentro da caixa*/
+    border-radius: 15px;
+}   
+.parent-box div:nth-child(2).child-box  { 
+    background-color: rgb(18, 187, 12);
+    /*colocar cores em cada caixa filho*/
 }
-.parent-box{
+.parent-box div:nth-child(3).child-box { 
+    background-color: rgb(75, 196, 135);
+}
+.parent-box div:nth-child(4).child-box { 
+    background-color: rgb(2, 105, 38);
+}
+#display-flex .parent-box {
     display: flex;
-    background-color: antiquewhite;  
-    padding: 40px 20px 20px 20px ; /*shorthand para: o padding-top padding-right padding-bottom, padding-left*/ /*padding é um espaçamento interno da box*/          
+    background-color:rgb(139, 115, 224);
+    padding: 40px 20px 20px 20px  /* espacamento interno entre caixa mestre e caixa filho*/
+    /*shortrand para o padding-top padding-right, padding-b0tton, padding-left */
 }
-.parent-box > p{
-    position: absolute;
-    margin-top: -30px ;
+.parent-box {
+    display:flex;
+    background-color:rgb(139, 115, 224);
+   /* margin: 40px ; /* espaçamento da borda pra caixa lateral*/
+    padding: 40px 20px 20px 20px  /* espacamento interno entre caixa mestre e caixa filho*/
+    /*shortrand para o padding-top padding-right, padding-b0tton, padding-left */
+}
+.parent-box  > p {
+    position:absolute;
+    margin-top: -30px;
     left: 25px;
 }
-.parent-box div:nth-child(2){
-    background-color: aquamarine;
-}
-.parent-box div:nth-child(3){
-    background-color: azure;
-}
-.parent-box div:nth-child(4){
-    background-color: rgb(152, 152, 197);
-}
-#justify-content .parent-box{
+#jc-center .parent-box { 
     justify-content: center;
+}
+#jc-space-around .parent-box{
+    justify-content: space-around;
+}
+#jc-space-between .parent-box{
+    justify-content: space-between;
+}
+#jc-space-evenly .parent-box{
+    justify-content: space-evenly;
 }
